@@ -1,6 +1,9 @@
 import getUserNames from './js/task-1'
 import getUserWithFriend from './js/task-2'
 import sortByDescendingFriendCount from './js/task-3'
+import getTotalBalanceByGender from './js/task-4'
+
+import { Users } from './js/task-4'
 
 console.log(
   getUserNames([
@@ -175,3 +178,45 @@ console.log(
 //     gender: "male"
 //   }
 // ]
+
+const clients: Users = [
+  {
+    name: 'Moore Hensley',
+    gender: 'male',
+    balance: 2811,
+  },
+  {
+    name: 'Sharlene Bush',
+    gender: 'female',
+    balance: 3821,
+  },
+  {
+    name: 'Ross Vazquez',
+    gender: 'male',
+    balance: 3793,
+  },
+  {
+    name: 'Elma Head',
+    gender: 'female',
+    balance: 2278,
+  },
+  {
+    name: 'Carey Barr',
+    gender: 'male',
+    balance: 3951,
+  },
+  {
+    name: 'Blackburn Dotson',
+    gender: 'male',
+    balance: 1498,
+  },
+  {
+    name: 'Sheree Anthony',
+    gender: 'female',
+    balance: 2764,
+  },
+]
+
+console.log(getTotalBalanceByGender(clients, 'male')) // 12053
+
+console.log(getTotalBalanceByGender(clients, 'female')) // 8863
